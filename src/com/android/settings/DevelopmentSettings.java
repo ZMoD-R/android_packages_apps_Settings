@@ -144,6 +144,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private static final String SELECT_LOGD_SIZE_PROPERTY = "persist.logd.size";
     private static final String SELECT_LOGD_DEFAULT_SIZE_PROPERTY = "ro.logd.size";
 
+    private static final String KEY_ADVANCED_REBOOT = "advanced_reboot";
+
     private static final String OPENGL_TRACES_KEY = "enable_opengl_traces";
 
     private static final String IMMEDIATELY_DESTROY_ACTIVITIES_KEY
@@ -179,6 +181,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private boolean mHaveDebugSettings;
     private boolean mDontPokeProperties;
 
+    private ListPreference mAdvancedReboot;
     private SwitchPreference mEnableAdb;
     private Preference mClearAdbKeys;
     private SwitchPreference mAdbNotify;
@@ -271,6 +274,11 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
         final PreferenceGroup debugDebuggingCategory = (PreferenceGroup)
                 findPreference(DEBUG_DEBUGGING_CATEGORY_KEY);
+
+        mAdvancedReboot = addListPreference(KEY_ADVANCED_REBOOT);
+        mAdvancedReboot.setValue(String.valueOf(Settings.Secure.getInt(
+                getContentResolver(), Settings.Secure.ADVANCED_REBOOT, 0)));
+        mAdvancedReboot.setSummary(mAdvancedReboot.getEntry());
 
         mEnableAdb = findAndInitSwitchPref(ENABLE_ADB);
         mClearAdbKeys = findPreference(CLEAR_ADB_KEYS);
@@ -1518,6 +1526,11 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         } else if (preference == mSimulateColorSpace) {
             writeSimulateColorSpace(newValue);
             return true;
+        } else if (preference == mAdvancedReboot) {
+            Settings.Secure.putInt(getContentResolver(), Settings.Secure.ADVANCED_REBOOT,
+                    Integer.valueOf((String) newValue));
+            mAdvancedReboot.setValue(String.valueOf(newValue));
+            mAdvancedReboot.setSummary(mAdvancedReboot.getEntry());
         }
         return false;
     }

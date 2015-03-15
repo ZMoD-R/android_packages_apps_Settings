@@ -15,23 +15,11 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- General strings -->
-    <string name="reset">Reset</string>
-	<string name="enabled">Enabled</string>
-    <string name="default_string">Default</string>
+    <string name="enabled">Enabled</string>
 
     <!-- Slim settings screens -->
     <string name="header_category_personalization">Personalization</string>
     <string name="interface_settings_title">Interface</string>
-
-    <!-- Color Picker -->
-    <string name="dialog_color_picker">Color Picker</string>
-    <string name="press_color_to_apply">Press on color below to apply</string>
-    <string name="arrow_right">→</string>
-    <string name="arrow_down">↓</string>
-    <string name="hex">Hex:</string>
-    <string name="hex_hint">#ff000000</string>
-    <string name="set">Set</string>
-    <string name="color_default">Default</string>
 
     <!-- Advanced reboot options -->
     <string name="advanced_reboot_title">Advanced reboot</string>
@@ -53,7 +41,7 @@
     <string name="adb_notify_summary">Display a notification when USB debugging is connected</string>
 
     <!-- Status bar -->
-    <string name="status_bar_style_title">Status bar style</string>
+    <string name="status_bar_style_title">Status bar</string>
 
     <!-- Status bar | Clock -->
     <string name="status_bar_clock">Clock and date</string>
@@ -61,8 +49,6 @@
     <string name="clock_title_enable">Alignment</string>
     <string name="clock_enabled">Enabled</string>
     <string name="clock_disabled">Disabled</string>
-    <string name="clock_color_title">Color</string>
-    <string name="status_bar_clock_style_reset">Reset color</string>
     <string name="status_bar_show_clock_title">Show clock and date</string>
     <string name="status_bar_am_pm_title">AM/PM</string>
     <string name="status_bar_am_pm_info">24-hour clock is enabled</string>
@@ -87,7 +73,6 @@
     <string name="clock_date_style_lowercase">Lowercase</string>
     <string name="clock_date_style_uppercase">Uppercase</string>
     <string name="clock_date_format_custom">Custom java format</string>
-    <string name="status_bar_clock_style_reset_message">Reset clock color?</string>
 
     <!-- Status bar - Battery Style -->
     <string name="status_bar_battery_style_title">Battery status style</string>

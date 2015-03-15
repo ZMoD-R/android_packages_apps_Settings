@@ -53,8 +53,7 @@
     <string name="adb_notify_summary">Display a notification when USB debugging is connected</string>
 
     <!-- Status bar -->
-    <string name="status_bar_title">Status bar</string>
-    <string name="status_bar_style_title">Style</string>
+    <string name="status_bar_style_title">Status bar style</string>
 
     <!-- Status bar | Clock -->
     <string name="status_bar_clock">Clock and date</string>
@@ -89,9 +88,6 @@
     <string name="clock_date_style_uppercase">Uppercase</string>
     <string name="clock_date_format_custom">Custom java format</string>
     <string name="status_bar_clock_style_reset_message">Reset clock color?</string>
-
-    <!-- Status bar - Battery Options -->
-    <string name="battery_icon_options_title">Battery icon options</string>
 
     <!-- Status bar - Battery Style -->
     <string name="status_bar_battery_style_title">Battery status style</string>
